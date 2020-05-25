@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACD12CA0247C61FC001DEBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD12C9F247C61FC001DEBFC /* AppDelegate.swift */; };
+		ACD12CA2247C61FC001DEBFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD12CA1247C61FC001DEBFC /* SceneDelegate.swift */; };
+		ACD12CA4247C61FC001DEBFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD12CA3247C61FC001DEBFC /* ContentView.swift */; };
+		ACD12CA6247C61FE001DEBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD12CA5247C61FE001DEBFC /* Assets.xcassets */; };
+		ACD12CA9247C61FE001DEBFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD12CA8247C61FE001DEBFC /* Preview Assets.xcassets */; };
+		ACD12CAC247C61FE001DEBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD12CAA247C61FE001DEBFC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ACD12C9C247C61FC001DEBFC /* Text Recognition Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Recognition Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD12C9F247C61FC001DEBFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACD12CA1247C61FC001DEBFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ACD12CA3247C61FC001DEBFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACD12CA5247C61FE001DEBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACD12CA8247C61FE001DEBFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACD12CAB247C61FE001DEBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACD12CAD247C61FE001DEBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACD12C99247C61FC001DEBFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACD12C93247C61FC001DEBFC = {
+			isa = PBXGroup;
+			children = (
+				ACD12C9E247C61FC001DEBFC /* Text Recognition Sample */,
+				ACD12C9D247C61FC001DEBFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACD12C9D247C61FC001DEBFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACD12C9C247C61FC001DEBFC /* Text Recognition Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACD12C9E247C61FC001DEBFC /* Text Recognition Sample */ = {
+			isa = PBXGroup;
+			children = (
+				ACD12C9F247C61FC001DEBFC /* AppDelegate.swift */,
+				ACD12CA1247C61FC001DEBFC /* SceneDelegate.swift */,
+				ACD12CA3247C61FC001DEBFC /* ContentView.swift */,
+				ACD12CA5247C61FE001DEBFC /* Assets.xcassets */,
+				ACD12CAA247C61FE001DEBFC /* LaunchScreen.storyboard */,
+				ACD12CAD247C61FE001DEBFC /* Info.plist */,
+				ACD12CA7247C61FE001DEBFC /* Preview Content */,
+			);
+			path = "Text Recognition Sample";
+			sourceTree = "<group>";
+		};
+		ACD12CA7247C61FE001DEBFC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ACD12CA8247C61FE001DEBFC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACD12C9B247C61FC001DEBFC /* Text Recognition Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACD12CB0247C61FE001DEBFC /* Build configuration list for PBXNativeTarget "Text Recognition Sample" */;
+			buildPhases = (
+				ACD12C98247C61FC001DEBFC /* Sources */,
+				ACD12C99247C61FC001DEBFC /* Frameworks */,
+				ACD12C9A247C61FC001DEBFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Text Recognition Sample";
+			productName = "Text Recognition Sample";
+			productReference = ACD12C9C247C61FC001DEBFC /* Text Recognition Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACD12C94247C61FC001DEBFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Stefan Blos";
+				TargetAttributes = {
+					ACD12C9B247C61FC001DEBFC = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = ACD12C97247C61FC001DEBFC /* Build configuration list for PBXProject "Text Recognition Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACD12C93247C61FC001DEBFC;
+			productRefGroup = ACD12C9D247C61FC001DEBFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACD12C9B247C61FC001DEBFC /* Text Recognition Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACD12C9A247C61FC001DEBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD12CAC247C61FE001DEBFC /* LaunchScreen.storyboard in Resources */,
+				ACD12CA9247C61FE001DEBFC /* Preview Assets.xcassets in Resources */,
+				ACD12CA6247C61FE001DEBFC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACD12C98247C61FC001DEBFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD12CA0247C61FC001DEBFC /* AppDelegate.swift in Sources */,
+				ACD12CA2247C61FC001DEBFC /* SceneDelegate.swift in Sources */,
+				ACD12CA4247C61FC001DEBFC /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ACD12CAA247C61FE001DEBFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACD12CAB247C61FE001DEBFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACD12CAE247C61FE001DEBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACD12CAF247C61FE001DEBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACD12CB1247C61FE001DEBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Text Recognition Sample/Preview Content\"";
+				DEVELOPMENT_TEAM = JY49624W8T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Text Recognition Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.stefanblos.Text-Recognition-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACD12CB2247C61FE001DEBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Text Recognition Sample/Preview Content\"";
+				DEVELOPMENT_TEAM = JY49624W8T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Text Recognition Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.stefanblos.Text-Recognition-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACD12C97247C61FC001DEBFC /* Build configuration list for PBXProject "Text Recognition Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACD12CAE247C61FE001DEBFC /* Debug */,
+				ACD12CAF247C61FE001DEBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACD12CB0247C61FE001DEBFC /* Build configuration list for PBXNativeTarget "Text Recognition Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACD12CB1247C61FE001DEBFC /* Debug */,
+				ACD12CB2247C61FE001DEBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACD12C94247C61FC001DEBFC /* Project object */;
+}
