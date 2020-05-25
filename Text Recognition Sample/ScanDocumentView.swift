@@ -18,4 +18,17 @@ final class ScanDocumentView: UIViewControllerRepresentable {
         // nothing to do here
     }
     
+    class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
+        var recognizedText: Binding<String>
+        var parent: ScanDocumentView
+        
+        init(recognizedText: Binding<String>, parent: ScanDocumentView) {
+            self.recognizedText = recognizedText
+            self.parent = parent
+        }
+        
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+            // do the processing of the scan
+        }
+    }
 }
