@@ -9,9 +9,18 @@
 import SwiftUI
 import VisionKit
 
-final class ScanDocumentView: UIViewControllerRepresentable {
+struct ScanDocumentView: UIViewControllerRepresentable {
+    
+    @Binding var recognizedText: String
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(recognizedText: $recognizedText, parent: self)
+    }
+    
     func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
-        // to implement
+        let documentViewController = VNDocumentCameraViewController()
+        documentViewController.delegate = context.coordinator
+        return documentViewController
     }
     
     func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
