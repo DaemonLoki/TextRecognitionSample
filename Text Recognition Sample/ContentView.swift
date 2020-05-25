@@ -9,8 +9,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var recognizedText = "Tap button to start scanning"
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            VStack {
+                ScrollView {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(Color.gray.opacity(0.2))
+                        
+                        Text(recognizedText)
+                            .padding()
+                    }
+                    .padding()
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        // start scanning
+                    }) {
+                        Text("Start Scanning")
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Capsule().fill(Color.blue))
+                }
+                .padding()
+            }
+        .navigationBarTitle("Text Recognition")
+        }
     }
 }
 
