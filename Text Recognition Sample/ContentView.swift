@@ -42,7 +42,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
-        .navigationBarTitle("Text Recognition")
+            .navigationBarTitle("Text Recognition")
         }
     }
 }
