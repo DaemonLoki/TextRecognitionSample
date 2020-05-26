@@ -38,6 +38,19 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
             // do the processing of the scan
+            print("Scan finished")
+            let extractedImages = extractImages(from: scan)
+        }
+        
+        fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
+            var extractedImages = [CGImage]()
+            for index in 0..<scan.pageCount {
+                let extractedImage = scan.imageOfPage(at: index)
+                guard let cgImage = extractedImage.cgImage else { continue }
+                
+                extractedImages.append(cgImage)
+            }
+            return extractedImages
         }
     }
 }

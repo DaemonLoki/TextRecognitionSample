@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var recognizedText = "Tap button to start scanning"
+    @State private var showingScanningView = false
     
     var body: some View {
         NavigationView {
@@ -32,7 +33,7 @@ struct ContentView: View {
                     Spacer()
                     
                     Button(action: {
-                        // start scanning
+                        self.showingScanningView = true
                     }) {
                         Text("Start Scanning")
                     }
@@ -43,6 +44,9 @@ struct ContentView: View {
                 .padding()
             }
             .navigationBarTitle("Text Recognition")
+            .sheet(isPresented: $showingScanningView) {
+                ScanDocumentView(recognizedText: self.$recognizedText)
+            }
         }
     }
 }
