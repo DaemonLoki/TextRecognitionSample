@@ -12,6 +12,7 @@ import Vision
 
 struct ScanDocumentView: UIViewControllerRepresentable {
     
+    @Environment(\.presentationMode) var presentationMode
     @Binding var recognizedText: String
     
     func makeCoordinator() -> Coordinator {
@@ -41,6 +42,8 @@ struct ScanDocumentView: UIViewControllerRepresentable {
             let extractedImages = extractImages(from: scan)
             let processedText = recognizeText(from: extractedImages)
             recognizedText.wrappedValue = processedText
+            
+            parent.presentationMode.wrappedValue.dismiss()
         }
         
         fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
