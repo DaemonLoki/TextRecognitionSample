@@ -38,7 +38,9 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         }
         
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-            // do the processing of the scan
+            let extractedImages = extractImages(from: scan)
+            let processedText = recognizeText(from: extractedImages)
+            recognizedText.wrappedValue = processedText
         }
         
         fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
