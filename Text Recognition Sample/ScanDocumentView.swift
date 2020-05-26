@@ -8,6 +8,7 @@
 
 import SwiftUI
 import VisionKit
+import Vision
 
 struct ScanDocumentView: UIViewControllerRepresentable {
     
@@ -38,8 +39,6 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
             // do the processing of the scan
-            print("Scan finished")
-            let extractedImages = extractImages(from: scan)
         }
         
         fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
@@ -51,6 +50,32 @@ struct ScanDocumentView: UIViewControllerRepresentable {
                 extractedImages.append(cgImage)
             }
             return extractedImages
+        }
+        
+        fileprivate func recognizeText(from images: [CGImage]) -> String {
+            var entireRecognizedText = ""
+            let recognizeTextRequest = VNRecognizeTextRequest { (request, error) in
+                guard error == nil else { return }
+                
+                guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+                
+                let maximumRecognitionCandidates = 1
+                for observation in observations {
+                    guard let candidate = observation.topCandidates(maximumRecognitionCandidates).first else { continue }
+                    
+                    entireRecognizedText += "\(candidate.string)\n"
+                    
+                }
+            }
+            recognizeTextRequest.recognitionLevel = .accurate
+            
+            for image in images {
+                let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+                
+                try? requestHandler.perform([recognizeTextRequest])
+            }
+            
+            return entireRecognizedText
         }
     }
 }
