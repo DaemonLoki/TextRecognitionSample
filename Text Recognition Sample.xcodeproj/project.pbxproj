@@ -14,6 +14,9 @@
 		ACD12CA9247C61FE001DEBFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD12CA8247C61FE001DEBFC /* Preview Assets.xcassets */; };
 		ACD12CAC247C61FE001DEBFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD12CAA247C61FE001DEBFC /* LaunchScreen.storyboard */; };
 		ACD12CB4247C6F53001DEBFC /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD12CB3247C6F53001DEBFC /* ScanDocumentView.swift */; };
+		BEF227AFAEED7FE380B92B25 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF226332C01541DD142E8D9 /* ImagePicker.swift */; };
+		C493CFDC2584DF1500C094D1 /* ScanImageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493CFDB2584DF1500C094D1 /* ScanImageContentView.swift */; };
+		C493CFDF2584DFD400C094D1 /* TextFromImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493CFDE2584DFD400C094D1 /* TextFromImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		ACD12CAB247C61FE001DEBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACD12CAD247C61FE001DEBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACD12CB3247C6F53001DEBFC /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
+		BEF226332C01541DD142E8D9 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C493CFDB2584DF1500C094D1 /* ScanImageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageContentView.swift; sourceTree = "<group>"; };
+		C493CFDE2584DFD400C094D1 /* TextFromImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFromImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				ACD12CAA247C61FE001DEBFC /* LaunchScreen.storyboard */,
 				ACD12CAD247C61FE001DEBFC /* Info.plist */,
 				ACD12CA7247C61FE001DEBFC /* Preview Content */,
+				C493CFDB2584DF1500C094D1 /* ScanImageContentView.swift */,
+				C493CFDE2584DFD400C094D1 /* TextFromImageViewModel.swift */,
+				BEF226332C01541DD142E8D9 /* ImagePicker.swift */,
 			);
 			path = "Text Recognition Sample";
 			sourceTree = "<group>";
@@ -150,9 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD12CB4247C6F53001DEBFC /* ScanDocumentView.swift in Sources */,
+				C493CFDF2584DFD400C094D1 /* TextFromImageViewModel.swift in Sources */,
 				ACD12CA0247C61FC001DEBFC /* AppDelegate.swift in Sources */,
 				ACD12CA2247C61FC001DEBFC /* SceneDelegate.swift in Sources */,
+				C493CFDC2584DF1500C094D1 /* ScanImageContentView.swift in Sources */,
 				ACD12CA4247C61FC001DEBFC /* ContentView.swift in Sources */,
+				BEF227AFAEED7FE380B92B25 /* ImagePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
