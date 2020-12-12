@@ -9,45 +9,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var recognizedText = "Tap button to start scanning"
-    @State private var showingScanningView = false
-    
+    @State private var showingImagePicker = false
+    @State private var image: Image?
+    @State private var inputImage: UIImage?
+
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .fill(Color.gray.opacity(0.2))
-                        
-                        Text(recognizedText)
-                            .padding()
-                    }
-                    .padding()
-                }
-                
-                Spacer()
-                
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        self.showingScanningView = true
-                    }) {
-                        Text("Start Scanning")
-                    }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Capsule().fill(Color.blue))
-                }
-                .padding()
+        ZStack {
+            Rectangle().fill(Color.secondary)
+
+            if image != nil {
+                image?.resizable().scaledToFit()
+            } else {
+                Text("Tap to select a picture").foregroundColor(.white).font(.headline)
             }
-            .navigationBarTitle("Text Recognition")
-            .sheet(isPresented: $showingScanningView) {
-                ScanDocumentView(recognizedText: self.$recognizedText)
-            }
+        }.onTapGesture {
+            self.showingImagePicker = true
+        }.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
         }
+    }
+
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 
@@ -56,3 +40,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
+
