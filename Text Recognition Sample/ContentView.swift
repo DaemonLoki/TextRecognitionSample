@@ -7,18 +7,20 @@
 //
 
 import SwiftUI
+import Vision
 
 struct ContentView: View {
     @State private var showingImagePicker = false
     @State private var image: Image?
+    @State private var textFromImage: String?
     @State private var inputImage: UIImage?
 
     var body: some View {
         ZStack {
             Rectangle().fill(Color.secondary)
 
-            if image != nil {
-                image?.resizable().scaledToFit()
+            if textFromImage != nil {
+                Text(textFromImage ?? "shit").foregroundColor(.white).font(.headline)
             } else {
                 Text("Tap to select a picture").foregroundColor(.white).font(.headline)
             }
@@ -30,8 +32,51 @@ struct ContentView: View {
     }
 
     func loadImage() {
-        guard let inputImage = inputImage else { return }
+        guard let inputImage = inputImage else {
+            return
+        }
+        var ciImage = CIImage(image: inputImage)!
+        var cgImage = convertCIImageToCGImage(inputImage: ciImage)
+        textFromImage = recognizeText(from: cgImage!)
         image = Image(uiImage: inputImage)
+    }
+
+    func convertCIImageToCGImage(inputImage: CIImage) -> CGImage! {
+        let context = CIContext(options: nil)
+        if context != nil {
+            return context.createCGImage(inputImage, from: inputImage.extent)
+        }
+        return nil
+    }
+
+    func recognizeText(from image: CGImage) -> String {
+        var entireRecognizedText = ""
+        let recognizeTextRequest = VNRecognizeTextRequest { (request, error) in
+            guard error == nil else {
+                return
+            }
+
+            guard let observations = request.results as? [VNRecognizedTextObservation] else {
+                return
+            }
+
+            let maximumRecognitionCandidates = 1
+            for observation in observations {
+                guard let candidate = observation.topCandidates(maximumRecognitionCandidates).first else {
+                    continue
+                }
+
+                entireRecognizedText += "\(candidate.string)\n"
+
+            }
+        }
+        recognizeTextRequest.recognitionLevel = .accurate
+
+        let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+
+        try? requestHandler.perform([recognizeTextRequest])
+
+        return entireRecognizedText
     }
 }
 
